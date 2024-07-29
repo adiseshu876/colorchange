@@ -1,0 +1,18 @@
+<div>
+    <h1>Using *ngFor in Select Element</h1>
+  
+    <!-- Select using *ngFor -->
+    <label for="ngForSelect">Select with *ngFor:</label>
+    <select id="ngForSelect" [(ngModel)]="selectedOption1">
+      <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+    </select>
+    <p>Selected: {{ selectedOption1 }}</p>
+  
+    <!-- Select using *ngFor with objects -->
+    <label for="ngForObjectSelect">Select with *ngFor and objects:</label>
+    <select id="ngForObjectSelect" [(ngModel)]="selectedOption2">
+      <option *ngFor="let option of options" [ngValue]="option">{{ option }}</option>
+    </select>
+    <p>Selected: {{ selectedOption2 }}</p>
+  </div>
+  

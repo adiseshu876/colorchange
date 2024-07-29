@@ -1,0 +1,46 @@
+.color-changer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  .input-container input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .result-container {
+    margin-top: 20px;
+  }
+  
+  .result-container div {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .color-box {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

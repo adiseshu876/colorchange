@@ -1,0 +1,94 @@
+/* General form container styling */
+.main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Form label styling */
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Form control styling */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the error messages */
+  .text-danger {
+    color: #d9534f;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  /* Link styling */
+  a {
+    color: #007bff;
+  }
+  
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Styling for checkbox and radio buttons */
+  .form-group input[type="checkbox"],
+  .form-group input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .form-group label {
+    margin-left: 5px;
+  }
+  
+  /* Error message for invalid form controls */
+  .invalid-feedback {
+    color: #dc3545;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-control {
+      font-size: 14px;
+    }
+  
+    .btn-primary {
+      font-size: 14px;
+    }
+  }
+  

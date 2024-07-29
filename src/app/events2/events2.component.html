@@ -1,0 +1,18 @@
+<div style="text-align:center">
+    <h1>Angular Event Handling Example</h1>
+  
+    <!-- Button with (click) -->
+    <button (click)="handleClick($event)">Click Me</button>
+  
+    <!-- Box to track mousemove events -->
+    <div class="box" (mousemove)="handleMouseMove($event)">
+      Move mouse here
+    </div>
+  
+    <!-- Display event logs -->
+    <div class="log">
+      <h2>Event Logs:</h2>
+      <pre>{{ eventLogs | join: '\n' }}</pre>
+    </div>
+  </div>
+  

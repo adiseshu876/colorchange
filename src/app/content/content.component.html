@@ -1,0 +1,28 @@
+<h2>Enter Name:</h2>
+<input type="text" [(ngModel)]="name">
+<button (click)="addName()">Add</button>
+
+<h2>Names List:</h2>
+<ul>
+  <li *ngFor="let n of names; let i = index">
+    {{ n }} 
+    <button (click)="removeName(i)">Remove</button>
+  </li>
+</ul>
+
+<h2>External Template Include:</h2>
+<ng-template>
+  <p>This is an external template included using ng-include directive.</p>
+  <p>It can contain any HTML content or Angular directives.</p>
+</ng-template>
+
+<!-- <h1>Enter Name:</h1>
+<input type="text" [(ngModel)]="parent" />
+<button (click)="AddParents()">Add</button>
+<ul>
+  <li *ngFor="let x of childs; let i = index">
+    {{ x }}
+    <button (click)="removeName(i)">Remove</button>
+  </li>
+</ul> -->
+

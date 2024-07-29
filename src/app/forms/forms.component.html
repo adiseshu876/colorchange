@@ -1,0 +1,211 @@
+<div class="main-container">
+    <form [formGroup]="RegistrationForm" (ngSubmit)="OnSubmit()">
+      <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          placeholder="Enter your first name"
+          class="form-control"
+          formControlName="firstName"
+        />
+        <div
+          *ngIf="
+            RegistrationForm.get('firstName').invalid &&
+            RegistrationForm.get('firstName').touched
+          "
+        >
+          <small
+            *ngIf="RegistrationForm.get('firstName').errors?.required"
+            class="text-danger"
+            >Enter Your Name</small
+          >
+          <small
+            *ngIf="RegistrationForm.get('firstName').errors?.minlength"
+            class="text-danger"
+            >Invalid format</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          placeholder="Enter your last name"
+          class="form-control"
+          formControlName="lastName"
+        />
+        <div
+          *ngIf="
+            RegistrationForm.get('lastName').invalid &&
+            RegistrationForm.get('lastName').touched
+          "
+        >
+          <small
+            *ngIf="RegistrationForm.get('lastName').errors?.required"
+            class="text-danger"
+            >Enter your last name</small
+          >
+          <small
+            *ngIf="RegistrationForm.get('lastName').errors?.minlength"
+            class="text-danger"
+            >Invalid format</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="form-control"
+          formControlName="email"
+        />
+        <div
+          *ngIf="
+            RegistrationForm.get('email').invalid &&
+            RegistrationForm.get('email').touched
+          "
+        >
+          <small
+            *ngIf="RegistrationForm.get('email').errors?.required"
+            class="text-danger"
+            >Enter Your Email</small
+          >
+          <small
+            *ngIf="RegistrationForm.get('email').errors?.email"
+            class="text-danger"
+            >Invalid email format</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          class="form-control"
+          formControlName="password"
+        />
+        <div
+          *ngIf="
+            RegistrationForm.get('password').invalid &&
+            RegistrationForm.get('password').touched
+          "
+        >
+          <small
+            *ngIf="RegistrationForm.get('password').errors?.required"
+            class="text-danger"
+            >Enter Your Password</small
+          >
+          <small
+            *ngIf="RegistrationForm.get('password').errors?.pattern"
+            class="text-danger"
+            >Invalid format</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mobile" class="form-label">Mobile</label>
+        <input
+          type="text"
+          placeholder="Enter your mobile number"
+          class="form-control"
+          formControlName="mobile"
+        />
+        <div
+          *ngIf="
+            RegistrationForm.get('mobile').invalid &&
+            RegistrationForm.get('mobile').touched
+          "
+        >
+          <small
+            *ngIf="RegistrationForm.get('mobile').errors?.required"
+            class="text-danger"
+            >Enter your mobile number</small
+          >
+          <small
+            *ngIf="RegistrationForm.get('mobile').errors?.pattern"
+            class="text-danger"
+            >Invalid mobile number. Must be 10 digits.</small
+          >
+        </div>
+      </div>
+  
+      <!-- Textbox -->
+      <div class="form-group">
+        <label for="address" class="form-label">Address</label>
+        <input
+          type="text"
+          placeholder="Enter your address"
+          class="form-control"
+          formControlName="address"
+        />
+      </div>
+  
+      <!-- Select Box -->
+      <div class="form-group">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-control" formControlName="country">
+          <option value="">Select Country</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+      </div>
+  
+      <!-- Checkbox -->
+      <div class="form-group">
+        <input
+          type="checkbox"
+          id="terms"
+          formControlName="terms"
+        />
+        <label for="terms" class="form-label">I agree to the terms and conditions</label>
+      </div>
+  
+      <!-- Radio Buttons -->
+      <div class="form-group">
+        <label class="form-label">Gender</label>
+        <div>
+          <input
+            type="radio"
+            id="male"
+            formControlName="gender"
+            value="male"
+          />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="female"
+            formControlName="gender"
+            value="female"
+          />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="other"
+            formControlName="gender"
+            value="other"
+          />
+          <label for="other">Other</label>
+        </div>
+      </div>
+  
+      <br />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="RegistrationForm.invalid"
+      >
+        Create
+      </button>
+      <div>
+        <small>Already have an account? <a routerLink="/login">Sign-in</a></small>
+      </div>
+    </form>
+  </div>
+  

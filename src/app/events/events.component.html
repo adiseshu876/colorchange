@@ -1,0 +1,24 @@
+<div style="text-align:center">
+    <h1>Angular Directives Example</h1>
+  
+    <!-- Input to control visibility and disable state -->
+    <label>
+      <input type="checkbox" [(ngModel)]="showBox" /> Show Box
+    </label>
+    <label>
+      <input type="checkbox" [(ngModel)]="disableInput" /> Disable Input
+    </label>
+  
+    <!-- Using *ngIf to show/hide elements -->
+    <div class="box" *ngIf="showBox">
+      <p>This box is visible when "Show Box" is checked.</p>
+    </div>
+  
+    <div class="box" *ngIf="!showBox">
+      <p>This box is hidden when "Show Box" is checked.</p>
+    </div>
+  
+    <!-- Input field using [disabled] property binding -->
+    <input type="text" [disabled]="disableInput" placeholder="This input can be disabled" />
+  </div>
+  
